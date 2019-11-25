@@ -1,3 +1,3 @@
 class Cashflow < ApplicationRecord
-  belongs_to :position
+  belongs_to :position, optional: true
 end
