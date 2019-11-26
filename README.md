@@ -1,24 +1,34 @@
-# README
+# Coding Challenge
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Installation
 
-Things you may want to cover:
+```bash
+git clone git@github.com:acatus/coding_challenge.git
+cd coding_challenge
+bundle
+```
 
-* Ruby version
+```bash
+rake db:create db:migrate db:seed
+```
 
-* System dependencies
+## Challenge
 
-* Configuration
+```
+rspec
+```
 
-* Database creation
+Calculate the internal rate of return and get the specs green!
 
-* Database initialization
+### Additional Information
 
-* How to run the test suite
+The irr is calculated with the following formula:
 
-* Services (job queues, cache servers, search engines, etc.)
+  ![](irr.gif)
 
-* Deployment instructions
+  - CF: cashflow amount
+  - t: time in days (can be fractions) based on daycount convention 30/360 [1][1]
+  - IRR: is the value to calculate [2][2]
 
-* ...
+[1][https://en.wikipedia.org/wiki/Day_count_convention#30E/360]
+[2][https://en.wikipedia.org/wiki/Internal_rate_of_return#Calculation]

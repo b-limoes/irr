@@ -36,7 +36,7 @@ describe Position do
         position.cashflows << create(:cashflow, amount: -1246, due_date: Date.parse('19-4-2031'))
         position.cashflows << create(:cashflow, amount: 175_500, due_date: Date.parse('19-4-2031'))
 
-        expect(position.irr).to be_within(0.0001).of(0.0219)
+        expect(position.irr).to be_within(0.0001).of(0.0225)
       end
     end
   end
